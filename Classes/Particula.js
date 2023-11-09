@@ -4,17 +4,18 @@ class Particula {
     this.lifespan = Math.ceil(random(10, 200));
     this.isAlive = true;
     this.side = Math.ceil(random(3, 15));
+    this.color = random(0, 150);
   }
   update() {
     this.r = random(100);
 
-    if (this.r < 25) {
+    if (this.r < 20) {
       // hacia arriba
       this.pos.x -= this.side;
-    } else if (this.r < 50) {
+    } else if (this.r < 40) {
       // hacia derecha
       this.pos.x += this.side;
-    } else if (this.r < 75) {
+    } else if (this.r < 80) {
       // hacia abajo
       this.pos.y += this.side;
     } else {
@@ -28,6 +29,8 @@ class Particula {
     }
   }
   display() {
+    fill(this.color);
+    stroke(255);
     square(this.pos.x, this.pos.y, this.side);
   }
 }
