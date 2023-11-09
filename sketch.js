@@ -1,24 +1,16 @@
+let s;
+let v;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   s = new Sistema();
+  v = new Sistema();
 }
 
 function draw() {
-  circle(mouseX, mouseY, 20);
-  s.update;
-  s.display;
+  background(255, 20);
+  s.update();
+  s.display();
+  v.update();
+  v.display();
 }
-
-// let p;
-
-// function setup() {
-//   createCanvas(windowWidth, windowHeight);
-//   p = new Particula(width / 2, height / 2);
-// }
-
-// function draw() {
-//   if (p.isAlive) {
-//     p.update();
-//     p.display();
-//   }
-// }
