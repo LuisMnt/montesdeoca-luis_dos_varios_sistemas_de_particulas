@@ -1,9 +1,12 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  s = new Sistema();
 }
 
 function draw() {
   circle(mouseX, mouseY, 20);
+  s.update;
+  s.display;
 }
 
 // let p;

@@ -4,14 +4,15 @@ class Particula {
     this.lifespan = Math.ceil(random(10, 200));
     this.isAlive = true;
     this.side = Math.ceil(random(3, 15));
-    this.color = random(0, 150);
+    this.color = random(255);
   }
   update() {
+    this.color = random(255);
     this.r = random(100);
 
     if (this.r < 20) {
       // hacia arriba
-      this.pos.x -= this.side;
+      this.pos.y -= this.side;
     } else if (this.r < 40) {
       // hacia derecha
       this.pos.x += this.side;
